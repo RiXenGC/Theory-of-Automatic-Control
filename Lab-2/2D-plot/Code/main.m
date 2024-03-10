@@ -26,6 +26,14 @@ function dxdt = model(t, x)
 %   x it the vector of state coordinates
 
 dxdt(1,:) = x(2,:);
-dxdt(2,:) = x(2,:) + x(1,:).^2 - 5 * sin( 0.3 * x(1,:).^2);
+dxdt(2,:) = x(2,:) + x(1,:).^2 - 5 .* sin( 0.3 * x(1,:).^2);
 
 end
+
+%function dxdt = test(t, x)
+%   Define the nonlinear, continious-time, state-space model
+%   t is the time;
+%   x it the vector of state coordinates
+%dxdt(1,:) = x(1,:).^2 - 4 * x(2, :).^2;
+%dxdt(2,:) = -2 .* x(2, :) + x(1,:) .* x(2, :);
+%end
