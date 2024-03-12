@@ -15,5 +15,13 @@ tspan = [0, tmax]; % Time of modeling
             plot(z(:, 1), z(:, 2), 'g'); % Plotting
         end
     end
+
+ax = gca;
+ax.XAxisLocation = 'origin';
+ax.YAxisLocation = 'origin';
+box off
+set(gca, 'XTick',-100:100)
+set(gca, 'YTick',-100:100)
+    
 hold off
 end

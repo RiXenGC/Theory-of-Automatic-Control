@@ -26,5 +26,12 @@ delete(f);
 save_system(sysname + ".slx");
 close_system(sysname + ".slx");
 
+ax = gca;
+ax.XAxisLocation = 'origin';
+ax.YAxisLocation = 'origin';
+box off
+set(gca, 'XTick',-100:100)
+set(gca, 'YTick',-100:100)
+
 hold off
 end
